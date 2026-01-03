@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehul Prajapati - DevOps Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #bfdbfe;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 25px;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-links a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .section {
+            background: rgba(30, 41, 59, 0.8);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+
+        h2 {
+            color: #60a5fa;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 10px;
+        }
+
+        .summary {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-card {
+            background: rgba(51, 65, 85, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .skill-card h3 {
+            color: #60a5fa;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            color: #fff;
+        }
+
+        .experience-item, .project-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(51, 65, 85, 0.4);
+            border-radius: 10px;
+            border-left: 4px solid #10b981;
+        }
+
+        .experience-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .job-title, .project-title {
+            color: #60a5fa;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .company, .project-tech {
+            color: #10b981;
+            font-size: 1.1em;
+        }
+
+        .duration {
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
+
+        .cert-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b, #f97316);
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            box-shadow: 0 5px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .education {
+            background: rgba(51, 65, 85, 0.4);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #8b5cf6;
+        }
+
+        .education h3 {
+            color: #a78bfa;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .experience-header, .project-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mehul Prajapati</h1>
+            <div class="subtitle">AWS Certified DevOps Engineer</div>
+            <div class="contact-links">
+                <a href="mailto:mehulprajapati789@gmail.com">📧 Email</a>
+                <a href="tel:+917666412341">📱 +91 7666412341</a>
+                <a href="https://github.com/Mehul-01" target="_blank">🔗 GitHub</a>
+                <a href="https://www.linkedin.com/in/mehulap9082/" target="_blank">💼 LinkedIn</a>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2>👨‍💻 About Me</h2>
+            <p class="summary">
+                AWS Certified DevOps Engineer with 2 years of combined experience, including 1 year of professional DevOps work, a 6-month internship at StarAgile, Bangalore, and 6 months of freelance DevOps projects. Specialized in automating deployments, managing CI/CD pipelines, and building scalable cloud infrastructure.
+            </p>
+            <p class="summary" style="margin-top: 15px;">
+                Proficient in managing production environments supporting 100,000+ users, with expertise in AWS services, Infrastructure as Code, containerization, and monitoring solutions. Also bring 1 year of software testing experience, providing a comprehensive understanding of the software development lifecycle.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>☁️ Cloud Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="tag">AWS EC2</span>
+                        <span class="tag">S3</span>
+                        <span class="tag">VPC</span>
+                        <span class="tag">IAM</span>
+                        <span class="tag">Route 53</span>
+                        <span class="tag">RDS</span>
+                        <span class="tag">ELB</span>
+                        <span class="tag">Auto Scaling</span>
+                        <span class="tag">CloudWatch</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>⚙️ DevOps Tools</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Jenkins</span>
+                        <span class="tag">GitHub Actions</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Terraform</span>
+                        <span class="tag">Ansible</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>🖥️ Servers & Hosting</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Nginx</span>
+                        <span class="tag">Apache</span>
+                        <span class="tag">Hostinger</span>
+                        <span class="tag">cPanel</span>
+                        <span class="tag">WHM</span>
+                        <span class="tag">Linux</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>📊 Monitoring & Testing</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Prometheus</span>
+                        <span class="tag">Grafana</span>
+                        <span class="tag">Selenium</span>
+                        <span class="tag">JMeter</span>
+                        <span class="tag">Postman</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>💻 Languages & Scripting</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Bash</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">GitHub</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>🗄️ Databases & Apps</h3>
+                    <div class="skill-tags">
+                        <span class="tag">MySQL</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💼 Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">DevOps & Test Engineer</div>
+                        <div class="company">NMIMS University</div>
+                    </div>
+                    <div class="duration">Dec 2024 – Present | Mumbai</div>
+                </div>
+                <ul>
+                    <li>Managed deployments across UAT, Dev, and Production environments for major university systems including UDMS (200 faculty), MPC (100 faculty), LMS (100,000+ users), Aptitude Portal, and Visiting Faculty modules</li>
+                    <li>Deployed and supported applications built on Node.js and Java Spring Boot with MySQL and PostgreSQL databases</li>
+                    <li>Performed system monitoring using Grafana, ensuring stability and performance of all live services</li>
+                    <li>Executed regular UAT deployments for new features and bug fixes, coordinating with teams before releasing to production</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">DevOps Engineer (Freelance)</div>
+                        <div class="company">ABCDITSOLUTIONS</div>
+                    </div>
+                    <div class="duration">Jun 2024 – Present</div>
+                </div>
+                <ul>
+                    <li>Managed critical aviation data, including aircraft parts, damaged components, and engine-related records</li>
+                    <li>Maintained secure multi-region backups using AWS S3 (Mumbai primary, Singapore replica) and additional cPanel backups</li>
+                    <li>Handled database management tasks including data updates, integrity checks, and backup monitoring</li>
+                    <li>Collaborated with development team to resolve issues and ensure smooth feature releases</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">DevOps Engineer Intern</div>
+                        <div class="company">StarAgile Technology</div>
+                    </div>
+                    <div class="duration">Aug 2024 – Jan 2025 | Bangalore</div>
+                </div>
+                <ul>
+                    <li>Assisted in designing, implementing, and maintaining CI/CD workflows</li>
+                    <li>Worked with tools including Git, Jenkins, Docker, and Kubernetes</li>
+                    <li>Gained hands-on experience in DevOps best practices and automation</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Software Tester</div>
+                        <div class="company">DZYRIS INFOTECH</div>
+                    </div>
+                    <div class="duration">Feb 2023 – Jan 2024 | Vasai</div>
+                </div>
+                <ul>
+                    <li>Performed manual testing of web applications to verify functionality, performance, and reliability</li>
+                    <li>Identified bugs, documented test results, and collaborated with developers for timely resolution</li>
+                    <li>Conducted API testing, automation testing using Selenium, and performance testing with JMeter</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🚀 Key Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">UDMS - University Document Management System</div>
+                </div>
+                <p style="color: #cbd5e1; margin-top: 10px;">
+                    Managed all document workflows through a centralized portal, eliminating the need for manual approvals from respective faculty or office staff. Streamlined document processing, improved efficiency, and reduced administrative overhead for 200+ faculty users.
+                </p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">LMS - Learning Management System</div>
+                </div>
+                <p style="color: #cbd5e1; margin-top: 10px;">
+                    Managed 200,000+ users, overseeing student activities including ICA (Internal Continuous Assessment), TEE (Term End Examination), and library resource access. Ensured smooth deployment and functionality of the platform for faculty and students.
+                </p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Aptitude Portal</div>
+                </div>
+                <p style="color: #cbd5e1; margin-top: 10px;">
+                    Supported 100+ students by deploying and maintaining portal features securely. Managed user registrations, assessment scheduling, and result tracking. Implemented regular updates and bug fixes to maintain portal stability.
+                </p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Visiting Faculty Portal</div>
+                </div>
+                <p style="color: #cbd5e1; margin-top: 10px;">
+                    Managed deployments and database records for visiting faculty modules. Tracked faculty schedules, attendance, and course allocations. Ensured data accuracy and security for sensitive faculty information.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎓 Education</h2>
+            <div class="education">
+                <h3>Bachelor of Technology (B.Tech) in Information Technology</h3>
+                <p style="color: #94a3b8;">K. J. Somaiya College of Information & Technology</p>
+                <p style="color: #94a3b8;">2023 | Mumbai, India</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🏆 Certifications</h2>
+            <div style="text-align: center; padding: 20px;">
+                <span class="cert-badge">✓ AWS Certified DevOps Engineer</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
